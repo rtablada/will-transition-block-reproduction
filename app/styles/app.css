@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+nav {
+  border-right: 1px solid #aaa;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 275px;
+}
+
+nav li {
+  border-bottom: 1px solid #aaa;
+}
+
+nav li a {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+}
+
+nav li a.active::before {
+  display: inline;
+  content: ">";
+}
+
+pre {
+  display: inline-block;
+  background: #ddd;
+  padding: 2px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  border-bottom: 1px solid #aaa;
+}
+
+footer {
+  margin: 6px;
+}
+
+.application-outlet {
+  padding: 12px;
+  flex: 1;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(0,0,0,0.4);
+}
+
+.confirm-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 5px;
+
+  min-height: 300px;
+  min-width: 300px;
+  background: #eee;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.flex {
+  display: flex;
+}

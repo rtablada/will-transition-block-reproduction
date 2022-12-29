@@ -1,0 +1,12 @@
+{{#if this.confirmService.isOpen}}
+  <div class="modal-overlay">
+    <div class="confirm-modal">
+      <p>{{this.confirmService.message}}</p>
+
+      <div class="flex">
+        <button type="button" {{on "click" this.confirmService.resolve}}>Yes</button>
+        <button type="button" {{on "click" this.confirmService.reject}}>No</button>
+      </div>
+    </div>
+  </div>
+{{/if}}

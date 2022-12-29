@@ -6,4 +6,10 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('route-will-transition');
+  this.route('route-will-change-event');
+
+  this.route('route-will-transition-with-abort');
+  this.route('route-will-change-event-with-abort');
+});

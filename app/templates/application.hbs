@@ -1,7 +1,37 @@
-{{page-title "RouterQueue"}}
+<main>
+  <nav>
+    <ul>
+      <li>
+        <LinkTo @route="route-will-transition">
+          Route <pre>willTransition</pre>
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="route-will-change-event">
+          Router service <pre>routeWillChange</pre>
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="route-will-transition-with-abort">
+          Route <pre>willTransition</pre> with abort
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="route-will-change-event-with-abort">
+          Router service <pre>routeWillChange</pre> with abort
+        </LinkTo>
+      </li>
+    </ul>
+  </nav>
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+  <div class="application-outlet">{{outlet}}</div>
+</main>
+<footer>
+  <p>This is a set of contrived examples to show the need an API to allow registering "beforeTransition" queue tasks that block transition</p>
+  <p>This was inspired by working through legacy code and finding coupling of controller to component state and parent routes in order to allow for transition delay</p>
+  <p>
+    Note that there is a public event api for "routeWillChange" that is non-blocking.
+  </p>
+</footer>
 
-{{outlet}}
+<ConfirmModal />
