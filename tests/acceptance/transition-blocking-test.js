@@ -35,7 +35,7 @@ module('Acceptance | Route willTransition promise awareness', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/route-will-transition',
-      'Url should not have changed after clicking current route link'
+      'Url should not have changed while modal is shown'
     );
 
     await click('[data-test-confirm-modal-action="cancel"]');
