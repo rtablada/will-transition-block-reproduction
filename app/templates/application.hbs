@@ -2,23 +2,13 @@
   <nav>
     <ul>
       <li>
-        <LinkTo @route="route-will-transition">
+        <LinkTo @route="route-will-transition" data-test-nav="route-will-transition">
           Route <pre>willTransition</pre>
         </LinkTo>
       </li>
       <li>
-        <LinkTo @route="route-will-change-event">
+        <LinkTo @route="route-will-change-event" data-test-nav="route-will-change-event">
           Router service <pre>routeWillChange</pre>
-        </LinkTo>
-      </li>
-      <li>
-        <LinkTo @route="route-will-transition-with-abort">
-          Route <pre>willTransition</pre> with abort
-        </LinkTo>
-      </li>
-      <li>
-        <LinkTo @route="route-will-change-event-with-abort">
-          Router service <pre>routeWillChange</pre> with abort
         </LinkTo>
       </li>
     </ul>

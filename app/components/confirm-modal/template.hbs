@@ -1,11 +1,11 @@
 {{#if this.confirmService.isOpen}}
-  <div class="modal-overlay">
+  <div class="modal-overlay" data-test-confirm-modal>
     <div class="confirm-modal">
       <p>{{this.confirmService.message}}</p>
 
       <div class="flex">
-        <button type="button" {{on "click" this.confirmService.resolve}}>Yes</button>
-        <button type="button" {{on "click" this.confirmService.reject}}>No</button>
+        <button type="button" {{on "click" this.confirmService.resolve}} data-test-confirm-modal-action="ok">Yes</button>
+        <button type="button" {{on "click" this.confirmService.reject}} data-test-confirm-modal-action="cancel">No</button>
       </div>
     </div>
   </div>
